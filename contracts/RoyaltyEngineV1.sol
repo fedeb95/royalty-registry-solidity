@@ -55,7 +55,7 @@ contract RoyaltyEngineV1 is ERC165, OwnableUpgradeable, IRoyaltyEngineV1 {
     /**
      * @dev See {IRoyaltyEngineV1-getRoyalty}
      */
-    function getRoyalty(address tokenAddress, uint256 tokenId, uint256 value) public override returns(address payable[] memory recipients, uint256[] memory amounts) {
+    function getRoyalty(address tokenAddress, uint256 tokenId, uint256 value) public virtual override returns(address payable[] memory recipients, uint256[] memory amounts) {
         int16 spec;
         address royaltyAddress;
         bool addToCache;
